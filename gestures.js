@@ -1,12 +1,26 @@
 "use strict";
 
 
-class handGesture{
-    constructor (numberOfGestures){
-        this.numberOfGestures = numberOfGestures;
+class HandGesture{
+    constructor (){
+    this.gesture = ["rock","paper","scissors","lizard","spock"];
+    }
+    gestureArray(){
+        let hands = this.gesture;
+        
+        return hands;
     }
 }
 
+
+
+
+
+
+
+
+
+
 module.exports = {
-    handGesture
+    HandGesture
 };

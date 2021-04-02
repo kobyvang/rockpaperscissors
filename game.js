@@ -1,6 +1,6 @@
 "use strict";
 
-
+const Player = require("./Player");
 
 class Game {
     constructor() {
@@ -9,6 +9,9 @@ class Game {
         
     }
     runGame() {
+        Player;
+        userChoice = prompt("multiplayer or singlePlayer?");
+        if(multiplayer===)
         let compare = function(choice1,choice2){
     if(choice1===choice2){
         return "The result is a tie!";
@@ -174,8 +177,6 @@ class Game {
         }
     }
 }
-
-compare(userChoice,computerChoice);
         this.displayGamerWinner();
     }
     displayRules() {
@@ -198,4 +199,4 @@ compare(userChoice,computerChoice);
         }
     }
         
-module.exports.Game = Game
+module.exports = Game;
