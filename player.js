@@ -1,6 +1,6 @@
 "use strict";
 
-const { HandGesture } = require("./gestures");
+const  HandGesture  = require("./gestures");
 
 
 
@@ -19,8 +19,7 @@ class Player {
 }
 
 
-let player = new Player();
-player.showGesture();
-console.log(player.showGesture());
+
+
 
 module.exports = Player; 

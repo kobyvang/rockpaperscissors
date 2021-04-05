@@ -1,6 +1,9 @@
 "use strict";
 
+const Computer = require("./Computer");
+const Human = require("./Human");
 const Player = require("./Player");
+const prompt = require("prompt-sync")();
 
 class Game {
     constructor() {
@@ -9,175 +12,28 @@ class Game {
         
     }
     runGame() {
-        Player;
-        userChoice = prompt("multiplayer or singlePlayer?");
-        if(multiplayer===)
-        let compare = function(choice1,choice2){
-    if(choice1===choice2){
-        return "The result is a tie!";
-    }
-    if(choice1==="rock"){
-        if(choice2==="scissors"){
-            return "rock crushes scissors";
+        this.displayRules();
+         let userChoice = prompt("multiplayer or singlePlayer?");
+        if(userChoice == "multiplayer"){
+            let player = new Player();
+            
+            console.log(player.showGesture());
+            let human = new Human();
+            human.chosen();
+           // Human;
+        }
+        else if(userChoice == "singleplayer"){
+            let player = new Player();
+            console.log(player.showGesture());
+            let robot = new Computer();
+            robot.chosen();
         }
         else{
-            return "try again";
+            this.runGame();
+
         }
-    }
-    if(choice1==="paper"){
-        if(choice2==="rock"){
-            return "paper covers rock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="scissors"){
-        if(choice2==="rock"){
-            return "rock crushes scissors";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="spock"){
-        if(choice2==="scissors"){
-            return "spock smashes scissors";
-        }
-        else{
-           return "try again";
-        }
-    }
-    if(choice1==="spock"){
-        if(choice2==="lizard"){
-            return "lizard poisons spock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="lizard"){
-        if(choice2==="spock"){
-            return "lizard poisons spock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="rock"){
-        if(choice2==="paper"){
-            return "paper covers rock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="scissors"){
-        if(choice2==="paper"){
-            return "scissors cuts paper";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="paper"){
-        if(choice2==="scissors"){
-            return "scissors cuts paper";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="scissors"){
-        if(choice2==="spock"){
-            return "spock smashes scissors";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="paper"){
-        if(choice2==="lizard"){
-            return "lizard eats paper";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="lizard"){
-        if(choice2==="paper"){
-            return "lizard eats paper";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="paper"){
-        if(choice2==="spock"){
-            return "paper disproves spock"
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="spock"){
-        if(choice2==="paper"){
-            return "paper disproves spock"
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="spock"){
-        if(choice2==="rock"){
-            return "spock vaporizes rock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="rock"){
-        if(choice2==="spock"){
-            return "spock vaporizes rock";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="scissors"){
-        if(choice2==="lizard"){
-            return "scissors decapitates lizard";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="lizard"){
-        if(choice2==="scissors"){
-            return "scissors decapitates lizard";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="rock"){
-        if(choice2==="lizard"){
-            return "rock crushes lizard";
-        }
-        else{
-            return "try again";
-        }
-    }
-    if(choice1==="lizard"){
-        if(choice2==="rock"){
-            return "rock crushes lizard";
-        }
-        else{
-            return "try again";
-        }
-    }
-}
-        this.displayGamerWinner();
+        
+        //this.displayGamerWinner();
     }
     displayRules() {
         console.log("Welcome to the Rock Paper Scissors!");
@@ -198,5 +54,6 @@ class Game {
           }
         }
     }
-        
+    
+    
 module.exports = Game;

@@ -21,6 +21,4 @@ class HandGesture{
 
 
 
-module.exports = {
-    HandGesture
-};
+module.exports = HandGesture;
